@@ -6,18 +6,27 @@
   <title>RED Atlas</title>
   <style>
     body { margin: 0; height: 100vh; display: flex; font-family: system-ui, sans-serif; background: #0b141a; color: #e9edef; }
-    aside { width: 16rem; flex: none; padding: 1.1rem 1rem; font-size: 0.9rem; line-height: 1.4; color: #aebac1; }
+    aside { width: 15rem; flex: none; padding: 1.1rem 1rem; font-size: 0.9rem; line-height: 1.45; color: #aebac1; }
     aside h1 { margin: 0 0 0.6rem; font-size: 1rem; color: #e9edef; font-weight: 600; }
-    aside p { margin: 0 0 0.7rem; }
-    aside ul { margin: 0 0 0.7rem; padding-left: 1.1rem; }
+    aside p { margin: 0; }
     main { flex: 1; min-width: 0; height: 100vh; display: flex; flex-direction: column; background: #111b21; }
-    @media (max-width: 700px) {
-      body { flex-direction: column; }
+    @media (max-width: 800px) {
+      body { flex-direction: column; overflow: auto; }
       aside { width: auto; }
-      main { height: auto; flex: 1; }
+      main { height: 70vh; flex: none; }
     }
     header { background: #1f2c34; padding: 0.8rem 1rem; font-weight: 600; }
-    #log { flex: 1; overflow: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    #log {
+      flex: 1;
+      overflow: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background-color: #0b141a;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' fill='none' stroke='%23ffffff' stroke-opacity='0.055' stroke-width='1.2'%3E%3Ccircle cx='22' cy='28' r='7'/%3E%3Cpath d='M62 20c10 0 8 14 18 14s8-14 18-14'/%3E%3Crect x='128' y='22' width='16' height='12' rx='2'/%3E%3Cpath d='M28 78c12-10 20 10 32 0'/%3E%3Ccircle cx='96' cy='84' r='5'/%3E%3Cpath d='M140 70l8 10-10 3z'/%3E%3Cpath d='M16 128h18M25 119v18'/%3E%3Ccircle cx='78' cy='142' r='8'/%3E%3Cpath d='M120 130c8 6 16-6 24 0'/%3E%3Cpath d='M150 150h12v-12'/%3E%3C/svg%3E");
+      background-size: 180px 180px;
+    }
     .bubble { max-width: 85%; padding: 0.55rem 0.7rem; border-radius: 8px; white-space: pre-wrap; line-height: 1.35; }
     .user { align-self: flex-end; background: #005c4b; }
     .bot { align-self: flex-start; background: #1f2c34; }
@@ -30,16 +39,8 @@
 </head>
 <body>
   <aside>
-    <h1>RED Atlas demo</h1>
-    <p>This is a demo of Red Atlas data over WhatsApp.</p>
-    <p>Type a Puerto Rico property address to get comparable sales.</p>
-    <ul>
-      <li>145 Calle Loiza, Carolina</li>
-      <li>1700 Calle Federico, Bayamón</li>
-      <li>1 Calle Añasco, Caguas</li>
-      <li>100 Calle del Muelle, San Juan</li>
-    </ul>
-    <p>Figures come from captured RED Atlas data.</p>
+    <h1>What this is</h1>
+    <p>This is a demo of using Red Atlas data as a distribution layer for appraisers. Instead of their own app or website, they get property insights through WhatsApp, the channel they already use every day. Red Atlas provides the structured Puerto Rico real estate data. The demo shows how that data reaches an appraiser as a clean, readable answer.</p>
   </aside>
   <main>
     <header>RED Atlas</header>
@@ -49,6 +50,10 @@
       <button type="submit">Send</button>
     </form>
   </main>
+  <aside>
+    <h1>How it works</h1>
+    <p>An appraiser types an address. It goes through WhatsApp and Meta, the distribution channel. The backend calls Red Atlas for structured property records. Templating shapes that raw data into what appraisers want: comps, price per square foot, and market conditions. The reply comes back on WhatsApp.</p>
+  </aside>
   <script>
     const log = document.querySelector("#log");
     function esc(s) {
