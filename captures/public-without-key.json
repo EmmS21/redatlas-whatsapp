@@ -1,0 +1,859 @@
+{
+  "capturedAt": "2026-11-27",
+  "auth": "none",
+  "calls": [
+    {
+      "name": "field-pricing",
+      "status": 200,
+      "body": {
+        "data": [
+          {
+            "fieldName": "aggregator_buildings",
+            "fieldType": "aggregator",
+            "creditCost": 10,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: buildings"
+          },
+          {
+            "fieldName": "aggregator_default",
+            "fieldType": "aggregator",
+            "creditCost": 5,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Default aggregator cost"
+          },
+          {
+            "fieldName": "aggregator_documents",
+            "fieldType": "aggregator",
+            "creditCost": 12,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: documents"
+          },
+          {
+            "fieldName": "aggregator_listings",
+            "fieldType": "aggregator",
+            "creditCost": 13,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: listings"
+          },
+          {
+            "fieldName": "aggregator_owners",
+            "fieldType": "aggregator",
+            "creditCost": 10,
+            "minTierRequired": "enterprise",
+            "indicatorPackage": null,
+            "description": "Market stats: owners"
+          },
+          {
+            "fieldName": "aggregator_parcels",
+            "fieldType": "aggregator",
+            "creditCost": 13,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: parcels"
+          },
+          {
+            "fieldName": "aggregator_permits",
+            "fieldType": "aggregator",
+            "creditCost": 13,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: permits"
+          },
+          {
+            "fieldName": "aggregator_properties",
+            "fieldType": "aggregator",
+            "creditCost": 10,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: properties"
+          },
+          {
+            "fieldName": "aggregator_shortTermRentals",
+            "fieldType": "aggregator",
+            "creditCost": 5,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Aggregation call (stats/top-by/pivot/market report) over short-term rentals"
+          },
+          {
+            "fieldName": "aggregator_taxes",
+            "fieldType": "aggregator",
+            "creditCost": 1000,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: taxes"
+          },
+          {
+            "fieldName": "aggregator_tenants",
+            "fieldType": "aggregator",
+            "creditCost": 15,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: tenants"
+          },
+          {
+            "fieldName": "aggregator_transactions",
+            "fieldType": "aggregator",
+            "creditCost": 20,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market stats: transactions"
+          },
+          {
+            "fieldName": "entity_buildings",
+            "fieldType": "base_entity",
+            "creditCost": 1,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Base cost per building record"
+          },
+          {
+            "fieldName": "entity_documents",
+            "fieldType": "base_entity",
+            "creditCost": 100,
+            "minTierRequired": "starter",
+            "indicatorPackage": null,
+            "description": "Base cost per document record"
+          },
+          {
+            "fieldName": "entity_listings",
+            "fieldType": "base_entity",
+            "creditCost": 3,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Base cost per listing record"
+          },
+          {
+            "fieldName": "entity_news",
+            "fieldType": "base_entity",
+            "creditCost": 1,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Base cost per real-estate news article (title, description, link, category, date)"
+          },
+          {
+            "fieldName": "entity_owners",
+            "fieldType": "base_entity",
+            "creditCost": 5,
+            "minTierRequired": "enterprise",
+            "indicatorPackage": null,
+            "description": "Base cost per owner-of-record record (Puerto Rico): name, parsed name parts, prior owner, source and confidence"
+          },
+          {
+            "fieldName": "entity_parcels",
+            "fieldType": "base_entity",
+            "creditCost": 1,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Base cost per parcel record"
+          },
+          {
+            "fieldName": "entity_permits",
+            "fieldType": "base_entity",
+            "creditCost": 8,
+            "minTierRequired": "starter",
+            "indicatorPackage": null,
+            "description": "Base cost per permit record"
+          },
+          {
+            "fieldName": "entity_properties",
+            "fieldType": "base_entity",
+            "creditCost": 1,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Base cost per property record"
+          },
+          {
+            "fieldName": "entity_shortTermRentals",
+            "fieldType": "base_entity",
+            "creditCost": 5,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Base cost per short-term rental (Airbnb) record"
+          },
+          {
+            "fieldName": "entity_taxes",
+            "fieldType": "base_entity",
+            "creditCost": 100,
+            "minTierRequired": "commercial",
+            "indicatorPackage": null,
+            "description": "Base cost per tax record."
+          },
+          {
+            "fieldName": "entity_tenants",
+            "fieldType": "base_entity",
+            "creditCost": 5,
+            "minTierRequired": "starter",
+            "indicatorPackage": null,
+            "description": "Base cost per tenant record"
+          },
+          {
+            "fieldName": "entity_transactions",
+            "fieldType": "base_entity",
+            "creditCost": 6,
+            "minTierRequired": "starter",
+            "indicatorPackage": null,
+            "description": "Base cost per transaction record"
+          },
+          {
+            "fieldName": "contacts_parcels",
+            "fieldType": "contacts",
+            "creditCost": 30,
+            "minTierRequired": "enterprise",
+            "indicatorPackage": null,
+            "description": "Owner/occupant contacts for a parcel (flat per call)"
+          },
+          {
+            "fieldName": "contacts_enriched",
+            "fieldType": "enrichment",
+            "creditCost": 150,
+            "minTierRequired": "enterprise",
+            "indicatorPackage": null,
+            "description": "Owner/occupant contact enrichment (skip-trace). Full charge on delivery (stored or live); never charged on no match or provider error."
+          },
+          {
+            "fieldName": "allPhotos",
+            "fieldType": "premium",
+            "creditCost": 1,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Full image gallery for a listing; the default photos field carries only a preview subset"
+          },
+          {
+            "fieldName": "dealOpportunity",
+            "fieldType": "premium",
+            "creditCost": 2,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Model verdict on a listing asking price: great_deal, good_deal, fair_price, above_average, high_price"
+          },
+          {
+            "fieldName": "descriptionAI",
+            "fieldType": "premium",
+            "creditCost": 8,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "AI-generated property description"
+          },
+          {
+            "fieldName": "estimatedMonthlyRentValue",
+            "fieldType": "premium",
+            "creditCost": 5,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Model-estimated monthly rent for a listing, in the listing currency"
+          },
+          {
+            "fieldName": "estimatedSaleValue",
+            "fieldType": "premium",
+            "creditCost": 5,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Model-estimated sale value for a listing, in the listing currency"
+          },
+          {
+            "fieldName": "jsonGPT",
+            "fieldType": "premium",
+            "creditCost": 8,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "AI-enriched structured data"
+          },
+          {
+            "fieldName": "luxuryScore",
+            "fieldType": "premium",
+            "creditCost": 2,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Model luxury rating for a listing, 1 to 6 (Puerto Rico only)"
+          },
+          {
+            "fieldName": "modelPrice",
+            "fieldType": "premium",
+            "creditCost": 8,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "AVM property valuation"
+          },
+          {
+            "fieldName": "quality",
+            "fieldType": "premium",
+            "creditCost": 2,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "UAD quality rating Q1 (highest) to Q6 (lowest). Graded by RED Atlas from listing photos and description; where no grade exists it is derived from the listing's price per m2 band."
+          },
+          {
+            "fieldName": "score",
+            "fieldType": "premium",
+            "creditCost": 2,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Atlas ranking score for a parcel or listing (integer)"
+          },
+          {
+            "fieldName": "report_avm_json",
+            "fieldType": "report",
+            "creditCost": 25,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "AVM report (JSON format)"
+          },
+          {
+            "fieldName": "report_avm_pdf",
+            "fieldType": "report",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "AVM report (PDF format)"
+          },
+          {
+            "fieldName": "report_comparables",
+            "fieldType": "report",
+            "creditCost": 30,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Comparables report"
+          },
+          {
+            "fieldName": "report_market_profile",
+            "fieldType": "report",
+            "creditCost": 18,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Market profile report (GET profile / POST generate) for API and MCP callers; platform sessions are free — 2026-08-19 product decision"
+          },
+          {
+            "fieldName": "search_query",
+            "fieldType": "search",
+            "creditCost": 10,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Cost per /v1/search query (proxies to searchbar-v1)"
+          },
+          {
+            "fieldName": "table_export_contacts",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "enterprise",
+            "indicatorPackage": null,
+            "description": "Explore Contacts tab export, per file (one page of people: name, role, phones and emails on file, source, latest record, parcel)"
+          },
+          {
+            "fieldName": "table_export_documents",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Documents table export, per file (one page of rows)"
+          },
+          {
+            "fieldName": "table_export_listings",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Listings table export, per file (one page of rows)"
+          },
+          {
+            "fieldName": "table_export_permits",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Permits table export, per file (one page of rows)"
+          },
+          {
+            "fieldName": "table_export_properties",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Properties table export, per file (one page of rows)"
+          },
+          {
+            "fieldName": "table_export_taxes",
+            "fieldType": "table_export",
+            "creditCost": 800,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Taxes table export, per file (one page of rows)"
+          },
+          {
+            "fieldName": "table_export_tenants",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Commercial Tenants table export, per file (one page of rows)"
+          },
+          {
+            "fieldName": "table_export_transactions",
+            "fieldType": "table_export",
+            "creditCost": 50,
+            "minTierRequired": "free",
+            "indicatorPackage": null,
+            "description": "Explore Comparables table export, per file (one page of rows)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "root",
+      "status": 404,
+      "code": null,
+      "message": "Cannot GET /external-api/v1/"
+    },
+    {
+      "name": "oauth-meta",
+      "status": 200,
+      "body": {
+        "resource": "https://apiv3.atlas.red/external-api/v1/mcp",
+        "authorization_servers": [
+          "https://apiv3.atlas.red"
+        ],
+        "scopes_supported": [
+          "mcp:tools"
+        ],
+        "bearer_methods_supported": [
+          "header"
+        ]
+      }
+    },
+    {
+      "name": "locations-cities",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "data-pri",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "openapi",
+      "status": 200,
+      "note": "OpenAPI 3 spec, 21 paths, no example payloads. Not property records."
+    },
+    {
+      "name": "search San Juan condo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "locations-neighborhoods",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Carolina house",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions San Juan",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Bayamon house",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Carolina",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Ponce commercial",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Bayamon",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Mayaguez house",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Ponce",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Mayaguez",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Caguas condo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Caguas",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Guaynabo house",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Guaynabo",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "search Toa Baja house",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listings Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "listing-stats Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "tx-stats Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "transactions Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "taxes Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "permits Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "top-by Toa Baja",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "comps San Juan APARTMENT",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "comps Carolina HOUSE",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "comps Ponce BUSINESS",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header or session cookie."
+    },
+    {
+      "name": "mcp initialize",
+      "status": 401,
+      "code": "UNAUTHORIZED",
+      "message": "Missing credentials. Expected Authorization header."
+    }
+  ]
+}

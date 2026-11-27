@@ -1,0 +1,113 @@
+{
+  "capturedAt": "2026-11-27T01:04:00Z",
+  "market": "pri",
+  "plan": "free",
+  "note": "Authenticated session on app.atlas.red. Free plan had 100 lifetime credits. After these calls, 1 credit remained. A listing row costs 3, so no further listing calls succeeded.",
+  "succeeded": [
+    {
+      "name": "cities",
+      "status": 200,
+      "total": 78,
+      "sample": ["Yabucoa", "Yauco"]
+    },
+    {
+      "name": "search-condado",
+      "status": 200,
+      "creditCost": 10,
+      "listings": 2,
+      "parcels": 2
+    },
+    {
+      "name": "stats-san-juan-condo",
+      "status": 200,
+      "creditCost": 13,
+      "near": "18.4655,-66.1057,3km",
+      "propertyType": "APARTMENT",
+      "totalCount": 302,
+      "price": { "avg": 1711319, "min": 165000, "max": 8262005, "count": 301 },
+      "areaSqm": { "avg": 211.2, "min": 29.7, "max": 2034.5, "count": 264 }
+    },
+    {
+      "name": "listings-carolina-house",
+      "status": 200,
+      "creditCost": 6,
+      "total": 19,
+      "rows": [
+        { "price": 490000, "builtArea": 204.38, "pricePerBuiltSqm": 2397.49, "rooms": 4, "toilets": 3, "status": "FOR_SALE", "propertyType": "HOUSE" },
+        { "price": 300000, "builtArea": 106.37, "pricePerBuiltSqm": 2820.34, "rooms": 3, "toilets": 2, "status": "FOR_SALE", "propertyType": "HOUSE" }
+      ]
+    },
+    {
+      "name": "stats-carolina-house",
+      "status": 200,
+      "creditCost": 13,
+      "totalCount": 35,
+      "price": { "avg": 306966, "min": 55000, "max": 675000, "count": 35 },
+      "areaSqm": { "avg": 178.9, "min": 83.61, "max": 402, "count": 26 }
+    },
+    {
+      "name": "listings-bayamon-house",
+      "status": 200,
+      "creditCost": 6,
+      "total": 32,
+      "rows": [
+        { "price": 170000, "builtArea": 106.47, "pricePerBuiltSqm": 1596.69, "rooms": 3, "toilets": 2, "status": "FOR_SALE", "propertyType": "HOUSE" },
+        { "price": 530000, "builtArea": 388.98, "pricePerBuiltSqm": 1362.53, "rooms": 4, "toilets": 4, "status": "FOR_SALE", "propertyType": "HOUSE" }
+      ]
+    },
+    {
+      "name": "stats-bayamon-house",
+      "status": 200,
+      "creditCost": 13,
+      "totalCount": 59,
+      "price": { "avg": 590869, "min": 85000, "max": 3995000, "count": 59 },
+      "areaSqm": { "avg": 234.6, "min": 64.5, "max": 513.4, "count": 46 }
+    },
+    {
+      "name": "stats-ponce-office",
+      "status": 200,
+      "creditCost": 13,
+      "totalCount": 0
+    },
+    {
+      "name": "listings-mayaguez-house",
+      "status": 200,
+      "creditCost": 6,
+      "total": 22,
+      "rows": [
+        { "price": 275000, "builtArea": 232.26, "pricePerBuiltSqm": 1184.03, "rooms": 3, "toilets": 2, "status": "FOR_SALE", "propertyType": "HOUSE" },
+        { "price": 219000, "builtArea": 139.35, "pricePerBuiltSqm": 1571.54, "rooms": 4, "toilets": 2, "status": "FOR_SALE", "propertyType": "HOUSE" }
+      ]
+    },
+    {
+      "name": "listings-caguas-condo",
+      "status": 200,
+      "creditCost": 6,
+      "total": 8,
+      "rows": [
+        { "price": 210000, "builtArea": 96.15, "pricePerBuiltSqm": 2184.09, "rooms": 3, "toilets": 2, "status": "FOR_SALE", "propertyType": "APARTMENT" },
+        { "price": 95000, "builtArea": 70.14, "pricePerBuiltSqm": 1354.41, "rooms": 2, "toilets": 1, "status": "FOR_SALE", "propertyType": "APARTMENT" }
+      ]
+    },
+    {
+      "name": "stats-caguas-condo",
+      "status": 200,
+      "creditCost": 13,
+      "totalCount": 8,
+      "price": { "avg": 292250, "min": 95000, "max": 500000, "count": 8 },
+      "areaSqm": { "avg": 322.5, "min": 70.14, "max": 918.06, "count": 5 }
+    }
+  ],
+  "failed": [
+    { "name": "listings-san-juan-condo", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "stats-mayaguez-house", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "listings-guaynabo-house", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "stats-guaynabo-house", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "listings-toa-baja-house", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "stats-toa-baja-house", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "listings-ponce-office", "status": 402, "reason": "credits exhausted mid-batch" },
+    { "name": "transactions", "status": 403, "reason": "starter plan or higher; account is free" },
+    { "name": "permits", "status": 403, "reason": "starter plan or higher; account is free" },
+    { "name": "taxes", "status": 403, "reason": "commercial plan or higher; account is free" }
+  ]
+}
