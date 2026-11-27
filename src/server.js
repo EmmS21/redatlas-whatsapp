@@ -31,6 +31,14 @@ loadEnv();
 const app = express();
 app.use(express.json());
 
+app.get("/", (_req, res) => {
+  res
+    .type("text/plain")
+    .send(
+      "Red Atlas WhatsApp demo — text a Puerto Rico property address to this number on WhatsApp to see comparable sales.\n",
+    );
+});
+
 const publicDir = path.join(rootDir, "public");
 app.use(express.static(publicDir));
 
