@@ -3,33 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RED Atlas on WhatsApp</title>
+  <title>RED Atlas</title>
   <style>
-    body {
-      font-family: Georgia, serif;
-      max-width: 36rem;
-      margin: 4rem auto;
-      padding: 0 1.25rem;
-      background: #fff;
-      color: #1a1a1a;
-      line-height: 1.4;
-    }
-    h1 { font-size: 1.75rem; font-weight: normal; }
-    a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: #128C7E;
-      color: #fff;
-      text-decoration: none;
-      padding: 0.7rem 1rem;
-      border-radius: 4px;
-      font-family: system-ui, sans-serif;
-    }
+    body { margin: 0; font-family: system-ui, sans-serif; background: #0b141a; color: #e9edef; }
+    main { max-width: 28rem; margin: 0 auto; height: 100vh; display: flex; flex-direction: column; background: #111b21; }
+    header { background: #1f2c34; padding: 0.8rem 1rem; font-weight: 600; }
+    #log { flex: 1; overflow: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .bubble { max-width: 85%; padding: 0.55rem 0.7rem; border-radius: 8px; white-space: pre-wrap; line-height: 1.35; }
+    .user { align-self: flex-end; background: #005c4b; }
+    .bot { align-self: flex-start; background: #1f2c34; }
+    .thumbs { display: flex; gap: 0.35rem; margin-top: 0.4rem; }
+    .thumbs img { width: 72px; height: 72px; object-fit: cover; border-radius: 4px; }
+    form { display: flex; gap: 0.4rem; padding: 0.6rem; background: #1f2c34; }
+    input { flex: 1; border: 0; border-radius: 8px; padding: 0.6rem 0.7rem; background: #2a3942; color: inherit; }
+    button { border: 0; border-radius: 8px; padding: 0 0.9rem; background: #00a884; color: #111; font-weight: 600; }
   </style>
 </head>
 <body>
-  <h1>WhatsApp is the distribution layer for RED Atlas real-estate data for appraisers.</h1>
-  <p>Text a Puerto Rico property address and get recent comparable sales back in the chat.</p>
-  <a href="https://wa.me/YOUR_TEST_NUMBER">Open WhatsApp</a>
+  <main>
+    <header>RED Atlas</header>
+    <div id="log"></div>
+    <form id="composer">
+      <input name="text" autocomplete="off" placeholder="Type a property address" required>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <script>
+    const log = document.querySelector("#log");
+    function esc(s) {
+      return s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+    }
+    function add(kind, text, photos) {
+      const el = document.createElement("div");
+      el.className = "bubble " + kind;
+      el.innerHTML = esc(text).replace(/\*([^*]+)\*/g, "<strong>$1</strong>");
+      if (photos && photos.length) {
+        const row = document.createElement("div");
+        row.className = "thumbs";
+        for (const url of photos) {
+          const img = document.createElement("img");
+          img.src = url;
+          img.alt = "";
+          row.appendChild(img);
+        }
+        el.appendChild(row);
+      }
+      log.appendChild(el);
+      log.scrollTop = log.scrollHeight;
+    }
+    document.querySelector("#composer").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const input = event.target.text;
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = "";
+      add("user", text);
+      const res = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      const data = await res.json();
+      add("bot", data.reply, data.photos);
+    });
+  </script>
 </body>
 </html>
