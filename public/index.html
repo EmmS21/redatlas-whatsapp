@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RED Atlas</title>
   <style>
-    body { margin: 0; font-family: system-ui, sans-serif; background: #0b141a; color: #e9edef; }
-    main { max-width: 28rem; margin: 0 auto; height: 100vh; display: flex; flex-direction: column; background: #111b21; }
+    body { margin: 0; height: 100vh; display: flex; font-family: system-ui, sans-serif; background: #0b141a; color: #e9edef; }
+    aside { width: 16rem; flex: none; padding: 1.1rem 1rem; font-size: 0.9rem; line-height: 1.4; color: #aebac1; }
+    aside h1 { margin: 0 0 0.6rem; font-size: 1rem; color: #e9edef; font-weight: 600; }
+    aside p { margin: 0 0 0.7rem; }
+    aside ul { margin: 0 0 0.7rem; padding-left: 1.1rem; }
+    main { flex: 1; min-width: 0; height: 100vh; display: flex; flex-direction: column; background: #111b21; }
+    @media (max-width: 700px) {
+      body { flex-direction: column; }
+      aside { width: auto; }
+      main { height: auto; flex: 1; }
+    }
     header { background: #1f2c34; padding: 0.8rem 1rem; font-weight: 600; }
     #log { flex: 1; overflow: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
     .bubble { max-width: 85%; padding: 0.55rem 0.7rem; border-radius: 8px; white-space: pre-wrap; line-height: 1.35; }
@@ -20,6 +29,18 @@
   </style>
 </head>
 <body>
+  <aside>
+    <h1>RED Atlas demo</h1>
+    <p>This is a demo of Red Atlas data over WhatsApp.</p>
+    <p>Type a Puerto Rico property address to get comparable sales.</p>
+    <ul>
+      <li>145 Calle Loiza, Carolina</li>
+      <li>1700 Calle Federico, Bayamón</li>
+      <li>1 Calle Añasco, Caguas</li>
+      <li>100 Calle del Muelle, San Juan</li>
+    </ul>
+    <p>Figures come from captured RED Atlas data.</p>
+  </aside>
   <main>
     <header>RED Atlas</header>
     <div id="log"></div>
